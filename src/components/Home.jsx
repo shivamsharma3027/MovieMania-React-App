@@ -48,7 +48,7 @@ const getTrending=async()=>{
   return wallpaper&& trending ? (<>
     
     <SideNav/>
-    <div className="w-[80%] h-full overflow-auto overflow-x-hidden ">
+    <div className="w-[80%]   overflow-x-hidden ">
       <TopNav/>
       <Header data={wallpaper}/>
       <div className=" flex justify-between p-5">
