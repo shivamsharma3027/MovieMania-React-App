@@ -20,14 +20,14 @@ const Popular = () => {
     try {
       const { data } = await axios.get(`${category}/popular?page=${page}`);
    
-      console.log(data.results);
+    
       if (data.results.length > 0) {
         setPopular((prev) => [...prev, ...data.results]);
         setPage(page + 1);
       } else {
         setHasMore(false);
       }
-      //  setTrending(data.results);
+     
     } catch (err) {
       console.log(err);
     }
@@ -71,14 +71,7 @@ const Popular = () => {
               setCategory(e.target.value);
             }}
           />
-          {/* <div className="w-[2%]"></div>
-          <Dropdown
-            title="Duration"
-            options={["week", "day"]}
-            func={(e) => {
-              setDuration(e.target.value);
-            }}
-          /> */}
+       
         </div>
       </div>
 

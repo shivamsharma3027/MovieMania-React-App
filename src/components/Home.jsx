@@ -44,7 +44,7 @@ const getTrending=async()=>{
 
 
 
-  console.log(trending);
+  
   return wallpaper&& trending ? (<>
     
     <SideNav/>

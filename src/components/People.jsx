@@ -22,7 +22,7 @@ const People = () => {
     try {
       const { data } = await axios.get(`/person/${category}?page=${page}`);
 
-      console.log(data.results);
+      
       if (data.results.length > 0) {
         setPerson((prev) => [...prev, ...data.results]);
         setPage(page + 1);
@@ -73,7 +73,7 @@ const People = () => {
         hasMore={hasMore}
         loader={<h1>Loading..</h1>}
       >
-        <Cards data={person} title={category} />
+        <Cards data={person} title="person" />
       </InfiniteScroll>
     </div>
   ) : (

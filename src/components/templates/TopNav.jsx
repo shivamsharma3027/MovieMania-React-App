@@ -11,7 +11,7 @@ const TopNav = () => {
   const GetSearches = async () => {
     try {
       const { data } = await axios.get(`/search/multi?query=${query}`);
-      console.log(data.results);
+      
       setSearches(data.results);
     } catch (err) {
       console.log(err);
@@ -42,10 +42,10 @@ const TopNav = () => {
           className="text-zinc-400 text-3xl ri-close-fill cursor-pointer"
         ></i>
       )}
-      <div className="z-[100] absolute top-[100%] w-[50%] max-h-[50vh] bg-zinc-200 overflow-auto rounded left-[5%]">
+      <div className="z-[100] absolute top-[100%] w-[50%] max-h-[50vh] bg-zinc-200 overflow-auto rounded left-[5%] ">
         {searches &&
           searches.map((s, i) => (
-            <Link
+            <Link to={`/${s.media_type}/details/${s.id}`}
               key={i}
               className="hover:text-black hover:bg-zinc-300 duration-300 font-semibold text-zinc-600 w-[100%] p-10 flex justify-start items-center border-b-2 border-zinc-100 "
             >

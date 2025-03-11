@@ -33,7 +33,7 @@ document.title=`Movie Mania | Trending`+ " "+category.charAt(0).toUpperCase() + 
     }
   };
 
-  console.log(trending);
+  
 
   const refreshHandler =  () => {
     if (trending.length === 0) {
