@@ -26,7 +26,7 @@ const PersonDetails = () => {
   
 
   return info ? (
-    <div className="px-[10%] w-screen h-[180vh] flex flex-col bg-[#1F1E24]">
+    <div className="px-[10%] w-screen h-[210vh] flex flex-col bg-[#1F1E24]">
       <nav className="h-[10vh] w-full text-zinc-200 flex items-center gap-10 text-2xl">
         <Link
           className="hover:text-[#6556cd] ri-arrow-left-line  "
